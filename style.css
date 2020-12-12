@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: silver;
+}
+
+header {
+  padding: 1rem;
+  background-color: lightgray;
+}
+
+.intro__text {
+  padding: 1rem;
+}
+
+/* Method List  */
+.methods__list {
+  padding: 2rem 1.5rem;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: lightgrey;
+}
+
+/*  Link styles */
+.link__style {
+  list-style: none;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: 600;
+  background-color: yellow;
+}
+
+a:visited {
+  color: red;
+}
+
+/* Code Sample Box */
+.sample__box {
+  margin: auto;
+  width: 75vw;
+  height: 200px;
+  background: lightslategray;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sample__title {
+  padding: 0.5rem 0;
+}
+
+code {
+  background-color: slategray;
+  padding: 1rem;
+}
+
+.sample__code {
+  color: white;
+}
+
+.method__sytax {
+  padding: 1rem;
+  border: 3px solid red;
+}
+
+.sample__text {
+  font-style: italic;
+}
+
+/* Footer   */
+footer {
+  text-align: center;
+  padding: 3rem;
+}
+
+.crimson {
+  color: crimson;
+}
+
+/*  Media query respnsive screen */
+@media only screen and (max-width: 640px) {
+  header {
+    font-size: 0.5rem;
+  }
+
+  .intro__text {
+    font-size: 0.75rem;
+  }
+
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.5rem 0;
+  }
+
+  .link__style {
+    font-size: 0.85rem;
+    padding: 0.35rem 0;
+  }
+
+  .sample__code {
+    font-size: 0.75rem;
+  }
+}
