@@ -73,5 +73,5 @@ const rando = randomArr() === 1 ? arrStr : arrNum;
 // code sample box display
 sampleTitle.textContent = "Method Summary";
 sampleCode.textContent = `${rando}`;
-syntax.textContent = "yes";
+syntax.textContent = codeSamples[0];
 sampleFacts.textContent = "This method can be used on arrays.";

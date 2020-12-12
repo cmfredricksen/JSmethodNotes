@@ -57,33 +57,41 @@ a:visited {
 /* Code Sample Box */
 .sample__box {
   margin: auto;
-  width: 75vw;
-  height: 200px;
+  width: 85vw;
+  height: 225px;
   background: lightslategray;
-  padding: 1rem;
+  padding: 0.7rem;
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
 }
 
 .sample__title {
-  padding: 0.5rem 0;
+  padding: 0 0;
+  margin: 0.5rem;
 }
 
 code {
-  background-color: slategray;
-  padding: 1rem;
+  background-color: dimgray;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid silver;
+  border-radius: 1rem;
 }
 
+/* Code Sample */
 .sample__code {
   color: white;
 }
 
-.method__sytax {
-  padding: 1rem;
-  border: 3px solid red;
+.method__syntax {
+  padding: 1rem 0;
+  color: lightgrey;
 }
 
-.sample__text {
+.sample__facts {
   font-style: italic;
 }
 
@@ -117,7 +125,16 @@ footer {
     padding: 0.35rem 0;
   }
 
+  .sample__title {
+    font-size: 0.8rem;
+  }
+
   .sample__code {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .sample__facts {
+    margin: 1rem 0;
+    font-size: 0.9rem;
   }
 }
