@@ -56,11 +56,19 @@ const linkMaker = (arr) => {
     name.textContent = html;
     console.log(name);
     uList.appendChild(name);
-    return name;
   });
 };
 
-linkMaker(names);
+const linkNames = linkMaker(names);
+console.log(linkNames);
+
+// linkNames.forEach(lname => {
+//   lname.addEvent
+// });
+
+// linkNames.addEventListener("click", function (e) {
+// sampleTitle.textContent = "hello";
+// });
 
 // code sample box random array
 function randomArr() {
@@ -69,6 +77,8 @@ function randomArr() {
 const arrStr = `const arrStr = ['a', 'b', 'c', 'd']`;
 const arrNum = `const arrNum = [1, 2, 3, 4]`;
 const rando = randomArr() === 1 ? arrStr : arrNum;
+
+const sampleCodeGen = function () {};
 
 // code sample box display
 sampleTitle.textContent = "Method Summary";

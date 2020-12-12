@@ -28,7 +28,6 @@ header {
 
 /* Method List  */
 .methods__list {
-  /* padding: 2rem 1.5rem; */
   margin-bottom: 1.5rem;
 }
 
@@ -56,8 +55,8 @@ a {
 
 a:hover {
   text-decoration: underline;
-  font-weight: 600;
-  background-color: yellow;
+  background-color: black;
+  color: yellow;
 }
 
 a:visited {
@@ -67,20 +66,13 @@ a:visited {
 /* Code Sample Box */
 .sample__box {
   margin: auto;
-  /* width: 85%; */
-  /* height: 225px; */
   background: lightslategray;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
-  /* align-items: center; */
-  /* border: 3px solid yellow; */
 }
 
 /* .sample__title { */
-/* padding: 0 0; */
-/* border: 3px solid orange; */
 /* } */
 
 code {
@@ -96,19 +88,16 @@ code {
 /* Code Sample */
 .sample__code {
   color: white;
-  /* border: 3px solid blue; */
 }
 
 .method__syntax {
   /* padding: 1rem 0; */
   margin-top: 1rem;
   color: lightgrey;
-  /* border: 3px solid red; */
 }
 
 .sample__facts {
   font-style: italic;
-  /* border: solid 3px lightgreen; */
 }
 
 /* Footer   */
