@@ -15,6 +15,7 @@ body {
 header {
   padding: 1rem;
   background-color: lightgray;
+  box-shadow: 3px 3px 7px dimgray;
 }
 
 .page__container {
@@ -104,6 +105,7 @@ code {
 footer {
   text-align: center;
   padding: 3rem;
+  box-shadow: 3px 3px 7px dimgray;
 }
 
 .crimson {

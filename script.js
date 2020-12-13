@@ -41,34 +41,50 @@ newMethod("sort", true, true, true);
 newMethod("map", false, true, true);
 
 // To make method links
-const linkMaker = (arr) => {
-  arr.forEach((name) => {
-    const html = `
-       ${name}
-    `;
-    const htmlLink = `#${name}`;
+names.forEach((name) => {
+  const html = `${name}`;
+  const htmlLink = `#${name}`;
 
-    name = document.createElement("a");
-    name.setAttribute("rel", "stylesheet");
-    name.setAttribute("type", "text/css");
-    name.setAttribute("href", htmlLink);
-    name.classList.add("link__style");
-    name.textContent = html;
-    console.log(name);
-    uList.appendChild(name);
-  });
-};
+  name = document.createElement("a");
+  name.setAttribute("rel", "stylesheet");
+  name.setAttribute("type", "text/css");
+  name.setAttribute("href", htmlLink);
+  name.setAttribute("id", html);
+  name.classList.add("link__style");
+  name.textContent = html;
+  console.log(name);
+  uList.appendChild(name);
+  // sampleTitle.textContent = name;
+});
 
-const linkNames = linkMaker(names);
-console.log(linkNames);
+uList.addEventListener("click", function (e) {
+  console.log("Hi");
+  sampleTitle.textContent = "Method Summary";
+});
 
-// linkNames.forEach(lname => {
-//   lname.addEvent
-// });
+console.log(names);
+// let tryOut;
+// const linkMaker = (arr) => {
+//   tryOut = arr.forEach((name) => {
+//     const html = `${name}`;
+//     const htmlLink = `#${name}`;
 
-// linkNames.addEventListener("click", function (e) {
-// sampleTitle.textContent = "hello";
-// });
+//     name = document.createElement("a");
+//     name.setAttribute("rel", "stylesheet");
+//     name.setAttribute("type", "text/css");
+//     name.setAttribute("href", htmlLink);
+//     name.setAttribute("id", html);
+//     name.classList.add("link__style");
+//     name.textContent = html;
+//     console.log(name);
+//     uList.appendChild(name);
+//   });
+//   uList.addEventListener("click", function (e) {
+//     console.log("Hi");
+//     // console.log(tryOut.name);
+//   });
+// };
+// linkMaker(names);
 
 // code sample box random array
 function randomArr() {
@@ -81,7 +97,7 @@ const rando = randomArr() === 1 ? arrStr : arrNum;
 const sampleCodeGen = function () {};
 
 // code sample box display
-sampleTitle.textContent = "Method Summary";
+// sampleTitle.textContent = "Method Summary";
 sampleCode.textContent = `${rando}`;
 syntax.textContent = codeSamples[0];
 sampleFacts.textContent = "This method can be used on arrays.";
