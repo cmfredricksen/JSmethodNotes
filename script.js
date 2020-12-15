@@ -80,5 +80,5 @@ const sampleCodeGen = function () {};
 // code sample box display
 sampleTitle.textContent = "method()";
 sampleCode.textContent = `${rando}`;
-syntax.textContent = syns[1];
+syntax.textContent = `arr.method()`;
 sampleFacts.textContent = "This method can be used on arrays.";
