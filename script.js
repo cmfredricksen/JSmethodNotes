@@ -58,11 +58,13 @@ names.forEach((name) => {
 });
 
 uList.addEventListener("click", function (e) {
-  console.log("Hi");
-  sampleTitle.textContent = "Method Summary";
+  console.log(e.target);
+  // sampleTitle.textContent = "Method Summary";
+  sampleTitle.textContent = `.${e.target.id}()`;
 });
 
 console.log(syns);
+console.log(uList);
 
 // code sample box random array
 function randomArr() {
@@ -75,7 +77,7 @@ const rando = randomArr() === 1 ? arrStr : arrNum;
 const sampleCodeGen = function () {};
 
 // code sample box display
-sampleTitle.textContent = names[1];
+sampleTitle.textContent = "method()";
 sampleCode.textContent = `${rando}`;
 syntax.textContent = syns[1];
 sampleFacts.textContent = "This method can be used on arrays.";
