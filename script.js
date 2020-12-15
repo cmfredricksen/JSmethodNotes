@@ -61,6 +61,7 @@ uList.addEventListener("click", function (e) {
   console.log(e.target);
   // sampleTitle.textContent = "Method Summary";
   sampleTitle.textContent = `.${e.target.id}()`;
+  syntax.textContent = `arr.${e.target.id}()`;
 });
 
 console.log(syns);

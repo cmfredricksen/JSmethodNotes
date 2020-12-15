@@ -60,7 +60,7 @@ a:hover {
 }
 
 a:visited {
-  color: red;
+  color: steelblue;
 }
 
 /* Code Sample Box */
@@ -117,7 +117,7 @@ footer {
   }
 
   .intro__text {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 
   ul {
