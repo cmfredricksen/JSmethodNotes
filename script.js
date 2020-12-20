@@ -9,6 +9,7 @@ const syns = [];
 // DOM Elements
 const methodsList = document.querySelector(".methods__list");
 const uList = document.querySelector("ul");
+const methodInfo = document.querySelector(".methods__info");
 
 // code sample
 const sampleBox = document.querySelector(".sample__box");
@@ -61,8 +62,10 @@ uList.addEventListener("click", function (e) {
   console.log(e.target);
   // sampleTitle.textContent = "Method Summary";
   sampleTitle.textContent = `.${e.target.id}()`;
-  syntax.textContent = `arr.${e.target.id}()`;
+  // syntax.textContent = `arr.${e.target.id}()`;
 });
+
+const disMethod = allMethods.forEach((method) => method.syntax);
 
 console.log(syns, "syns");
 console.log(uList, "ulist");
@@ -82,3 +85,20 @@ sampleTitle.textContent = "method()";
 sampleCode.textContent = `${rando}`;
 syntax.textContent = `arr.method()`;
 sampleFacts.textContent = "This method can be used on arrays.";
+
+// Methods Info
+allMethods.forEach((method) => {
+  const infoDisplay = document.createElement("div");
+  const infoTitle = document.createElement("h3");
+  const info = document.createElement("p");
+  infoDisplay.classList.add("info__display");
+  infoTitle.classList.add("info__title");
+  info.classList.add("info__text");
+
+  infoTitle.textContent = method.name;
+  info.textContent = `The ${method.name} method`;
+
+  methodInfo.appendChild(infoDisplay);
+  infoDisplay.appendChild(infoTitle);
+  infoDisplay.appendChild(info);
+});

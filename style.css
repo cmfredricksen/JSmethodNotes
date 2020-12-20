@@ -100,6 +100,23 @@ code {
   font-style: italic;
 }
 
+/* Method Info */
+.info__display {
+  padding: 1rem;
+}
+
+.info__display:nth-child(even) {
+  background-color: lightgrey;
+}
+
+.info__title {
+  color: steelblue;
+}
+
+.info__text {
+  margin: 0.5rem;
+}
+
 /* Footer   */
 footer {
   text-align: center;
