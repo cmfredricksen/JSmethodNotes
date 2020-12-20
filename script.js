@@ -5,6 +5,7 @@ const arrMethods = [];
 const allMethods = [];
 const names = [];
 const syns = [];
+const infoStr = [];
 
 // DOM Elements
 const methodsList = document.querySelector(".methods__list");
@@ -62,7 +63,8 @@ uList.addEventListener("click", function (e) {
   console.log(e.target);
   // sampleTitle.textContent = "Method Summary";
   sampleTitle.textContent = `.${e.target.id}()`;
-  // syntax.textContent = `arr.${e.target.id}()`;
+  syntax.textContent = `arr.${e.target.id}()`;
+  // sampleFacts.textContent = infoStr;
 });
 
 const disMethod = allMethods.forEach((method) => method.syntax);
@@ -84,7 +86,7 @@ const sampleCodeGen = function () {};
 sampleTitle.textContent = "method()";
 sampleCode.textContent = `${rando}`;
 syntax.textContent = `arr.method()`;
-sampleFacts.textContent = "This method can be used on arrays.";
+sampleFacts.textContent = "Methods can be used on strings and arrays.";
 
 // Methods Info
 allMethods.forEach((method) => {
@@ -96,9 +98,17 @@ allMethods.forEach((method) => {
   info.classList.add("info__text");
 
   infoTitle.textContent = method.name;
-  info.textContent = `The ${method.name} method`;
+  info.textContent = `
+  The ${method.name} method:
+  used for arrays: ${method.arr}
+  uses callback function: ${method.callBack}
+  syntax: ${method.syntax}
+  `;
+  infoStr.push(info.textContent);
 
   methodInfo.appendChild(infoDisplay);
   infoDisplay.appendChild(infoTitle);
   infoDisplay.appendChild(info);
 });
+
+console.log(infoStr);
