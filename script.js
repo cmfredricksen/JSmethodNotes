@@ -53,7 +53,7 @@ names.forEach((name) => {
   name.setAttribute("id", html);
   name.classList.add("link__style");
   name.textContent = html;
-  console.log(name);
+  // console.log(name);
   uList.appendChild(name);
 });
 
@@ -64,8 +64,8 @@ uList.addEventListener("click", function (e) {
   syntax.textContent = `arr.${e.target.id}()`;
 });
 
-console.log(syns);
-console.log(uList);
+console.log(syns, "syns");
+console.log(uList, "ulist");
 
 // code sample box random array
 function randomArr() {
